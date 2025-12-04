@@ -1,14 +1,14 @@
 # 📝 Note App - Ứng Dụng Ghi Chú (Flutter/SQLite)
 
 Ứng dụng tập trung vào việc triển khai lưu trữ cục bộ bằng **SQLite** và quản lý trạng thái bằng **Provider** trong Flutter.
-```
+
 <div align="center">
 <img src="screenshot\main.png" width="100"/>
 <img src="screenshot\create.png" width="100"/>
 <img src="screenshot\editnote.png" width="100"/>
 <img src="screenshot\note.png" width="100"/>
 </div>
-```
+
 ## ✨ Tính năng Chính
 
 Dự án triển khai đầy đủ các chức năng **CRUD** (Create, Read, Update, Delete) cho ghi chú:
