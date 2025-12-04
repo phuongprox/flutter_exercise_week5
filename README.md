@@ -28,7 +28,7 @@ Dự án triển khai đầy đủ các chức năng **CRUD** (Create, Read, Upd
 | **`sqflite`** | ^2.3.0 | Giao diện cho **SQLite**, được sử dụng làm cơ sở dữ liệu cục bộ. |
 | **`provider`** | ^6.1.0 | Giải pháp quản lý trạng thái, giúp chia sẻ dữ liệu và cập nhật giao diện (UI). |
 | **`path_provider`** | ^2.1.0 | Được sử dụng để tìm đường dẫn lưu file database trên thiết bị. |
-| **`intl`** | ^0.18.0 | (Đã thêm trong `pubspec.yaml`) Hỗ trợ định dạng ngày giờ. |
+| **`intl`** | ^0.18.0 | Hỗ trợ định dạng ngày giờ. |
 
 ## 🏗️ Cấu trúc dự án
 
