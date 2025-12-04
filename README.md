@@ -1,16 +1,77 @@
-# note_namphuong
+# 📝 Note App - Ứng Dụng Ghi Chú (Flutter/SQLite)
 
-A new Flutter project.
+Ứng dụng tập trung vào việc triển khai lưu trữ cục bộ bằng **SQLite** và quản lý trạng thái bằng **Provider** trong Flutter.
 
-## Getting Started
+<div align="center">
+<img src="screenshot\main.png" width="100"/>
+<img src="screenshot\create.png" width="100"/>
+<img src="screenshot\editnote.png" width="100"/>
+<img src="screenshot\note.png" width="100"/>
+</div>
 
-This project is a starting point for a Flutter application.
+## ✨ Tính năng Chính
 
-A few resources to get you started if this is your first Flutter project:
+Dự án triển khai đầy đủ các chức năng **CRUD** (Create, Read, Update, Delete) cho ghi chú:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* **Tạo Ghi chú:** Cho phép tạo ghi chú mới với tiêu đề và nội dung.
+* **Xem Danh sách:** Hiển thị tất cả ghi chú, sắp xếp theo thời gian cập nhật gần nhất.
+* **Chỉnh sửa Ghi chú:** Sửa đổi ghi chú hiện có.
+* **Xóa Ghi chú:** Thực hiện xóa với hộp thoại **xác nhận**.
+* **Lưu trữ Bền vững:** Dữ liệu được lưu cục bộ và không bị mất khi đóng ứng dụng.
+* **Theo dõi Thời gian (Timestamps):** Ghi lại thời gian tạo và cập nhật.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Công nghệ Sử dụng (Tech Stack)
+
+| Package | Phiên bản | Mục đích |
+| :--- | :--- | :--- |
+| **`flutter`** | N/A | Nền tảng phát triển ứng dụng di động. |
+| **`sqflite`** | ^2.3.0 | Giao diện cho **SQLite**, được sử dụng làm cơ sở dữ liệu cục bộ. |
+| **`provider`** | ^6.1.0 | Giải pháp quản lý trạng thái, giúp chia sẻ dữ liệu và cập nhật giao diện (UI). |
+| **`path_provider`** | ^2.1.0 | Được sử dụng để tìm đường dẫn lưu file database trên thiết bị. |
+| **`intl`** | ^0.18.0 | (Đã thêm trong `pubspec.yaml`) Hỗ trợ định dạng ngày giờ. |
+
+## 🏗️ Cấu trúc Dự án (Project Structure)
+
+Dự án tuân theo cấu trúc phân tầng (Layered Architecture) tiêu chuẩn của Flutter:
+```markdown
+lib/
+├── database/            # Quản lý Database và các thao tác CRUD
+│   └── db_helper.dart
+├── models/              # Định nghĩa cấu trúc dữ liệu (Note Model)
+│   └── note.dart
+├── providers/           # Logic quản lý trạng thái (State Management)
+│   └── note_provider.dart
+├── screens/             # Các màn hình chính của ứng dụng (UI)
+│   ├── home_page.dart
+│   └── note_editor_screen.dart
+├── widgets/             # Các thành phần UI có thể tái sử dụng (ví dụ: NoteCard)
+├── main.dart            # Điểm khởi đầu và thiết lập Provider
+```
+## 🚀 Các bước Cài đặt và Chạy
+
+1.  **Clone Repository:**
+    ```bash
+    git clone [LINK_REPOSITORY_CỦA_BẠN]
+    cd [TÊN_THƯ_MỤC_DỰ_ÁN]
+    ```
+
+2.  **Cài đặt Dependencies:**
+    ```bash
+    flutter pub get
+    ```
+
+3.  **Khởi động Ứng dụng:**
+    ```bash
+    flutter run
+    ```
+    *(Lưu ý: Đảm bảo đã có máy ảo Android/iOS hoặc thiết bị vật lý được kết nối và đang chạy).*
+
+## 💡 Chi tiết Triển khai Kỹ thuật
+
+* **Database Helper:** Triển khai **Mẫu Singleton** để đảm bảo chỉ có một instance database duy nhất.
+* **Note Model:** Sử dụng **Timestamp Integer** (`millisecondsSinceEpoch`) để lưu trữ `DateTime` vào SQLite.
+* **State Management:** Sử dụng `ChangeNotifierProvider` để bọc ứng dụng và gọi `notifyListeners()` trong `NoteProvider` sau mỗi thao tác CRUD để cập nhật UI.
+
+---
+**Tác giả:** [Tên của bạn]
+**Đại học:** Thu Dau Mot University
