@@ -9,6 +9,8 @@
 <img src="screenshot\note.png" width="100"/>
 </div>
 
+```
+Video Demo: [**Xem video demo tại đây**](https://drive.google.com/file/d/1WxUDdATsrUI2H1AnEZD5Yf91IB2ZB-gT/view?usp=sharing)
 ## ✨ Tính năng chính
 
 Dự án triển khai đầy đủ các chức năng **CRUD** (Create, Read, Update, Delete) cho ghi chú:
